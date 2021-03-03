@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+		<script>
+			$(document).ready(function()
+			{
+				$('button').click(function()
+				{
+					var name=$('input:checked').val();
+					if(name=="Sana")
+					{
+						$('#p1').animate({width:"+=100px"},'slow',function()
+						{
+							if(($('#p1').css("width").slice(0,-2)-0)>=1000)
+							{
+								$("input,button").attr('disabled', true);
+								$("#vt").show("slow");
+								$('#p1').html("<h4 style='margin-top:6px;'>"+name+" is Winner!!!</h4>");
+							}
+						});
+					}
+					if(name=="Sidharth")
+					{
+						$('#p2').animate({width:"+=100px"},'slow',function()
+						{
+							if(($('#p2').css("width").slice(0,-2)-0)>=1000)
+							{
+								$("input,button").attr('disabled', true);
+								$("#vt").show("slow");
+								$('#p2').html("<h4 style='margin-top:6px;'>"+name+" is Winner!!!</h4>");
+							}
+						});
+					}
+					if(name=="Asim")
+					{
+						$('#p3').animate({width:"+=100px"},'slow',function()
+						{
+							if(($('#p3').css("width").slice(0,-2)-0)>=1000)
+							{
+								$("input,button").attr('disabled', true);
+								$("#vt").show("slow");
+								$('#p3').html("<h4 style='margin-top:6px;'>"+name+" is Winner!!!</h4>");
+							}
+						});
+					}
+					if(name=="Rashmi")
+					{
+						$('#p4').animate({width:"+=100px"},'slow',function()
+						{
+							if(($('#p4').css("width").slice(0,-2)-0)>=1000)
+							{
+								$("input,button").attr('disabled', true);
+								$("#vt").show("slow");
+								$('#p4').html("<h4 style='margin-top:6px;'>"+name+" is Winner!!!</h4>");
+							}
+						});
+					}
+					if(name=="Paras")
+					{
+						$('#p5').animate({width:"+=100px"},'slow',function()
+						{
+							if(($('#p5').css("width").slice(0,-2)-0)>=1000)
+							{
+								$("input,button").attr('disabled', true);
+								$("#vt").show("slow");
+								$('#p5').html("<h4 style='margin-top:6px;'>"+name+" is Winner!!!</h4>");
+							}
+						});
+					}
+				});
+			});
+		</script>
+	
+	
+	<body>
+		<div class="container bg-light">
+			<div class="row">
+				<div class="col-md">
+					<span class="display-1"><b>BigBoss Voting Zone<b></span>
+				</div>
+			</div>
+			
+			<div class="row" style="margin-top:10px;">
+				<div class="col-md-5 bg-info">
+					<h1>1) Select Your Favourite Contestant</h1>
+					
+					<h3><input type="radio" name="ct" value="Sana"> Sana</h3>
+					<h3><input type="radio" name="ct" value="Sidharth"> Sidharth</h3>
+					<h3><input type="radio" name="ct" value="Asim"> Asim</h3>
+					<h3><input type="radio" name="ct" value="Rashmi"> Rashmi</h3>
+					<h3><input type="radio" name="ct" value="Paras"> Paras</h3>
+				</div>
+				
+				<div class="col-md-7" style="background-color:Tomato;">
+					<h1>2) Click On Give Vote Button To Vote</h1>
+					
+					<button class="btn btn-success" style="margin-top:50px;margin-left:200px;""><h3>Give Vote</h3></button>
+					
+					<h2 align="center" id="vt" style="display:none;">Voting Lines Has Been Closed!!</h2>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md bg-warning">
+					<h1>3) See The Progress Here</h1>
+					
+					<h3>Sana</h3>
+					<div class="progress" style="height:20px;">
+						<div id="p1" class="progress-bar progress-bar-striped bg-success" style="width:25%"></div>
+					</div><br>
+					
+					<h3>Sidharth</h3>
+					<div class="progress" style="height:20px;">
+						<div id="p2" class="progress-bar progress-bar-striped bg-success" style="width:60%"></div>
+					</div><br>
+					
+					<h3>Asim</h3>
+					<div class="progress" style="height:20px;">
+						<div id="p3" class="progress-bar progress-bar-striped bg-success" style="width:35%"></div>
+					</div><br>
+					
+					<h3>Rashmi</h3>
+					<div class="progress" style="height:20px;">
+						<div id="p4" class="progress-bar progress-bar-striped bg-success" style="width:20%"></div>
+					</div><br>
+					
+					<h3>Paras</h3>
+					<div class="progress" style="height:20px;">
+						<div id="p5" class="progress-bar progress-bar-striped bg-success" style="width:50%"></div>
+					</div><br>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
