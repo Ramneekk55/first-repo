@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title> Calculator </title>
+    </head>
+    
+        <form>
+            Calculator <br>
+            <input type="text" name="value" id="a"> <br> <br>
+            <input type="button" name="1" onclick="f1()" value="1">  &nbsp; &nbsp; 
+            <input type="button" name="2" onclick="f2()" value="2">   &nbsp; &nbsp; 
+            <input type="button" name="3" onclick="f3()" value="3"> &nbsp; &nbsp; 
+            <input type="button" name="+" onclick="f10()" value="+">  &nbsp; &nbsp; <br><br>
+            <input type="button" name="4" onclick="f4()" value="4">  &nbsp; &nbsp; 
+            <input type="button" name="5" onclick="f5()" value="5">  &nbsp; &nbsp; 
+            <input type="button" name="6" onclick="f6()" value="6">  &nbsp; &nbsp; 
+            <input type="button" name="-" value="-" onclick="f11()">  &nbsp; &nbsp; <br><br>
+            <input type="button" name="7" onclick="f7()" value="7">  &nbsp; &nbsp; 
+            <input type="button" name="8" onclick="f8()" value="8"> &nbsp; &nbsp; 
+            <input type="button" name="9" onclick="f9()" value="9"> &nbsp; &nbsp; 
+            <input type="button" name="*" value="*" onclick="f12()">  &nbsp; &nbsp; <br><br>
+            <input type="button" name="C" value="C" onclick="f16()">  &nbsp; &nbsp; 
+            <input type="button" name="0" value="0" onclick="f14()">  &nbsp; &nbsp; 
+            <input type="button" name="=" value="=" onclick="f15()"> &nbsp; &nbsp; 
+            <input type="button" name="/" value="/" onclick="f13()"> &nbsp; &nbsp; 
+        </form>
+        <script>
+        function f1(){
+            var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "1";
+        }
+        function f2(){
+            val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "2";
+        }
+        function f3(){
+            var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "3";
+        }
+        function f4(){
+        var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "4";
+        }
+         function f5(){
+        var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "5";
+        }
+         function f6(){
+        var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "6";
+        }
+         function f7(){
+        var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "7";
+        }
+         function f8(){
+        var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "8";
+        }
+         function f9(){
+        var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "9";
+        }
+         function f10(){
+        var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "+";
+        }
+        function f11(){
+        var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "-";
+        }
+        function f12(){
+        var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "*";
+        }
+        function f13(){
+        var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "/";
+        }
+        function f14(){
+        var val=document.getElementById("a").value;
+            document.getElementById("a").value= val + "0";
+        }
+        function f15(){
+        var val=document.getElementById("a").value;
+        var rev=0;
+        var temp1=0,temp2=0,temp3=0,temp4=0;
+        for(i=0;i<val.length;i++){
+            if(val[i]=='+'){
+                temp1=1;
+            }
+            if(val[i]=='-'){
+                temp2=1;
+            }
+            if(val[i]=='*'){
+                temp3=1;
+            }
+            if(val[i]=='/'){
+                temp4=1;
+            }
+        }
+            for(i=0;i<val.length;i++){
+                if(temp1==1){
+                    
+                if(val[i]=='+'){
+                    z=rev;
+                    rev=0;
+                }
+                else{
+                    rev=parseInt(rev*10)+parseInt(val[i]);
+                }
+            }
+                if(temp2==1){
+                    
+                 if(val[i]=='-'){
+                    z=rev;
+                    rev=0;
+                }
+                else{
+                    rev=parseInt(rev*10)+parseInt(val[i]);
+                }
+                }
+                if(temp3==1){
+                    
+                 if(val[i]=='*'){
+                    z= rev;
+                    rev=0;
+                }
+                else {
+                    rev= parseInt(rev*10)+parseInt(val[i]);
+                }
+                }
+                if(temp4==1){
+                    
+               if(val[i]=='/'){
+                    z= rev;
+                    rev=0;
+                }
+                else{
+                    rev=parseInt(rev*10)+parseInt(val[i]);
+                }
+                }
+            }
+            if(temp1==1){
+                var m= parseInt(z)+parseInt(rev);
+            }
+            if(temp2==1){
+                var m= parseInt(z)-parseInt(rev);
+            }
+            if(temp3==1){
+                var m= parseInt(z)*parseInt(rev);
+            }
+            if(temp4==1){
+                var m= parseInt(z)/parseInt(rev);
+            }
+            
+            document.getElementById("a").value=m;
+        }
+        function f16(){
+            document.getElementById("a").value="";
+            
+        }
+        </script>
+    
+</body>
+</html>
